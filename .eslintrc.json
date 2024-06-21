@@ -1,0 +1,96 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "google",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsdoc/recommended",
+    "plugin:json/recommended-with-comments"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["@typescript-eslint", "jsdoc", "prettier", "json", "import"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "max-len": ["error", 120],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": ["/"]
+      }
+    ],
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "axios",
+            "message": "Use axios from 'lib/axios'."
+          }
+        ]
+      }
+    ],
+    "valid-jsdoc": "off",
+    "require-jsdoc": "off",
+    "jsdoc/require-jsdoc": "off",
+    "jsdoc/require-param-type": "off",
+    "jsdoc/require-returns-type": "off",
+    "jsdoc/require-hyphen-before-param-description": "warn",
+    "jsdoc/check-param-names": "off",
+    "jsdoc/require-param": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "{react,react-dom/**,react-router-dom}",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "@src/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "always"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "prefer": "type-imports" }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/lib/axios.ts"],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ]
+}

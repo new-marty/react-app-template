@@ -1,0 +1,16 @@
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+
+node_modules
+.vscode/*
+*.yml
+dist
+dist-ssr
+*.local
+logs
+*.log
+.DS_Store

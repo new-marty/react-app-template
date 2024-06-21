@@ -1,0 +1,53 @@
+{
+  "name": "react-app-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\" --quiet --fix",
+    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx,json}\" --fix ",
+    "prepare": "husky",
+    "spellcheck": "cspell \"src/**/*.{js,jsx,ts,tsx,json}\"",
+    "spellcheck:add": "cspell --words-only --unique \"src/**/*.{js,jsx,ts,tsx,json}\" | sort --ignore-case >> project-words.txt"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.15",
+    "@mui/material": "^5.14.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "cspell": "^8.8.3",
+    "eslint": "8.52.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.2.3",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-n": "^16.2.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-sort": "^3.0.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5",
+    "vite-tsconfig-paths": "^4.2.1"
+  }
+}
